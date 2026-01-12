@@ -1,0 +1,128 @@
+{
+    "info": {
+        "_postman_id": "b5a8c9e0-1234-5678-9abc-def012345678",
+        "name": "HoneySellTracker",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Sale",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"batchId\": \"Sorisha_One_2026_40_kg\",\n  \"sellingDate\": \"2026-01-11\",\n  \"buyerName\": \"John Doe\",\n  \"quantityKg\": 40.0,\n  \"amount\": 20000.00,\n  \"paymentCleared\": false,\n  \"dueDate\": \"2026-02-01\",\n  \"paymentMethod\": \"Cash\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/sales",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "sales"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get All Sales",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8081/api/sales",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "sales"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Summary (All)",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8081/api/sales/summary",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "sales",
+                        "summary"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Sales by Batch",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8081/api/sales/batch/Sorisha_One_2026_40_kg",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "sales",
+                        "batch",
+                        "Sorisha_One_2026_40_kg"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Summary by Batch",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8081/api/sales/summary?batchId=Sorisha_One_2026_40_kg",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "sales",
+                        "summary"
+                    ],
+                    "query": [
+                        {
+                            "key": "batchId",
+                            "value": "Sorisha_One_2026_40_kg"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "batchId": "Sorisha_One_2026_40_kg",
+    "sellingDate": "2026-01-11",
+    "buyerName": "John Doe",
+    "quantityKg": 40.0,
+    "amount": 20000.00,
+    "paymentCleared": false,
+    "dueDate": "2026-02-01",
+    "paymentMethod": "Cash"
+}
